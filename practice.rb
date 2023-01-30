@@ -27,3 +27,27 @@ blockchain = [
 # Anthony's KelloggCoin balance is 2650
 
 # 👇👇👇 Your code HERE 👇👇👇
+
+# i need to create a user list
+to_user_list = []
+index = 0
+for n in blockchain
+  to_user_list.push(blockchain[index]["to_user"])
+  index = index + 1
+end
+user_list = to_user_list.uniq.sort
+puts user_list
+
+# i need to calculate each users' balance
+user_wallets = [{"name" => , "balance" =>}]
+
+for user in user_list
+  for n in blockchain
+    if blockchain["to_user"] == user
+      balance = balance + blockchain["amount"]
+    elsif blockchain["from_user"] == user
+      balance = balance - blockchain["amount"]
+    end
+  
+
+#
