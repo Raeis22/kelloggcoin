@@ -45,21 +45,27 @@ user_wallets = []
 for user in user_list
   each_user_wallet = {"name" => "", "balance" => 0}
   each_user_wallet["name"] = user
-  p each_user_wallet
+  # p each_user_wallet
   user_wallets.push(each_user_wallet)
-  p user_wallets
+  # p user_wallets
 end
 
+index_2 = 0
+for user in user_list
+  balance = 0
+  for n in blockchain
+    index_3 = 0
+    if blockchain[index_3]["to_user"] == user
+      balance = balance + blockchain[index_3]["amount"]
+    elsif blockchain[index_3]["from_user"] == user
+      balance = balance - blockchain[index_3]["amount"]
+    end
+    index_3 = index_3 + 1
+  end
+  user_wallets[index_2]["balance"] = balance
+  index_2 = index_2 + 1
+end
 
-
-
-# for user in user_list
-#   for n in blockchain
-#     if blockchain["to_user"] == user
-#       balance = balance + blockchain["amount"]
-#     elsif blockchain["from_user"] == user
-#       balance = balance - blockchain["amount"]
-#     end
-  
+p user_wallets
 
 #
