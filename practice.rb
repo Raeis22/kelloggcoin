@@ -39,15 +39,25 @@ user_list = to_user_list.uniq.sort
 puts user_list
 
 # i need to calculate each users' balance
-user_wallets = [{"name" => , "balance" =>}]
 
+user_wallets = []
+
+each_user_wallet = {"name" => "", "balance" => 0}
 for user in user_list
-  for n in blockchain
-    if blockchain["to_user"] == user
-      balance = balance + blockchain["amount"]
-    elsif blockchain["from_user"] == user
-      balance = balance - blockchain["amount"]
-    end
+  each_user_wallet["name"] = user
+  user_wallets.push(each_user_wallet)
+end
+puts user_wallets
+
+
+
+# for user in user_list
+#   for n in blockchain
+#     if blockchain["to_user"] == user
+#       balance = balance + blockchain["amount"]
+#     elsif blockchain["from_user"] == user
+#       balance = balance - blockchain["amount"]
+#     end
   
 
 #
