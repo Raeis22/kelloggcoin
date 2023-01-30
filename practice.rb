@@ -53,8 +53,8 @@ end
 index_2 = 0
 for user in user_list
   balance = 0
+  index_3 = 0
   for n in blockchain
-    index_3 = 0
     if blockchain[index_3]["to_user"] == user
       balance = balance + blockchain[index_3]["amount"]
     elsif blockchain[index_3]["from_user"] == user
