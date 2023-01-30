@@ -36,7 +36,7 @@ for n in blockchain
   index_1 = index_1 + 1
 end
 user_list = to_user_list.uniq.sort
-puts user_list
+# puts user_list
 
 # i need to calculate each users' balance
 
@@ -64,6 +64,7 @@ for user in user_list
   end
   user_wallets[index_2]["balance"] = balance
   index_2 = index_2 + 1
+  p user_wallets
 end
 
 p user_wallets
