@@ -30,10 +30,10 @@ blockchain = [
 
 # i need to create a user list
 to_user_list = []
-index = 0
+index_1 = 0
 for n in blockchain
-  to_user_list.push(blockchain[index]["to_user"])
-  index = index + 1
+  to_user_list.push(blockchain[index_1]["to_user"])
+  index_1 = index_1 + 1
 end
 user_list = to_user_list.uniq.sort
 puts user_list
@@ -42,12 +42,14 @@ puts user_list
 
 user_wallets = []
 
-each_user_wallet = {"name" => "", "balance" => 0}
 for user in user_list
+  each_user_wallet = {"name" => "", "balance" => 0}
   each_user_wallet["name"] = user
+  p each_user_wallet
   user_wallets.push(each_user_wallet)
+  p user_wallets
 end
-puts user_wallets
+
 
 
 
